@@ -21,17 +21,20 @@
     };
     navbar_loader.send();
 
+    base_url+='modals/';
+    [
+        'login.html',
+        'register.html',
+        'style.html'
+    ].forEach(function(ele)
+    {
+        load_modals(ele);
+    });
     function load_modals(modal)
     {
+
         var modal_loader=new XMLHttpRequest();
-        if(dev)
-        {
-            modal_loader.open('get','modal.html');
-        }
-        else
-        {
-            modal_loader.open('get','//navbar.luoc.me/modal.html');
-        }
+        modal_loader.open('get',base_url+modal);
         modal_loader.onreadystatechange=function()
         {
             if(this.readyState==4&&this.status==200)
@@ -40,19 +43,19 @@
             }
         };
         modal_loader.send();
-    }
-    function done_load_modal(res)
-    {
-        if(jQuery)
+        function done_load_modal(res)
         {
-            $(document.body).prepend($(res));
-        }
-        else
-        {
-            setTimeout(function()
+            if(jQuery)
             {
-                done_load_modal(res);
-            },100);
+                $(document.body).prepend($(res));
+            }
+            else
+            {
+                setTimeout(function()
+                {
+                    done_load_modal(res);
+                },100);
+            }
         }
     }
 
