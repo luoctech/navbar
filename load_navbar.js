@@ -23,9 +23,10 @@
 
     base_url+='modals/';
     [
+        'style.html',
         'login.html',
         'register.html',
-        'style.html'
+        'change_password.html'
     ].forEach(function(ele)
     {
         load_modals(ele);
