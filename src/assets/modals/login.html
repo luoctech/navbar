@@ -12,12 +12,12 @@
                 <form class="form">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon-people iconfont"></i></span>
-                        <input type="text" class="form-control" placeholder="账号/手机号/邮箱">
+                        <input id="login_account" type="text" class="form-control" placeholder="账号/手机号/邮箱">
                     </div>
                     <br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon-lock iconfont"></i></span>
-                        <input type="password" class="form-control" placeholder="密码">
+                        <input id="login_password" type="password" class="form-control" placeholder="密码">
                     </div>
                     <div class="checkbox">
                         <label>
@@ -30,16 +30,16 @@
                         </span>
                     </div>
                     <br>
-                    <button class="btn-primary submit-button" type="submit" id="login-button">登陆</button>
+                    <button class="btn-primary submit-button" type="button" id="login_button">登陆</button>
                 </form>
 
                 <hr>
                 <h4 class="text-center">合作账号登陆</h4>
 
                 <div class="login-oauth-wrapper text-center">
-                    <a href="#" id="qq_login"><img src="//navbar.luoc.me/img/qq.jpg" alt="QQ登陆"></a>
-                    <a href="#" id="wx_login"><img src="//navbar.luoc.me/img/wx.jpg" alt="微信登陆"></a>
-                    <a href="#" id="alipay_login"><img src="//navbar.luoc.me/img/alipay.png" alt="支付宝登陆"></a>
+                    <a href="#" id="qq_login"><img src="//luoc.co/navbar/img/icons/qq.jpg" alt="QQ登陆"></a>
+                    <a href="#" id="wx_login"><img src="//luoc.co/navbar/img/icons/wx.jpg" alt="微信登陆"></a>
+                    <a href="#" id="alipay_login"><img src="//luoc.co/navbar/img/icons/alipay.png" alt="支付宝登陆"></a>
                 </div>
 
             </div>
@@ -59,6 +59,3 @@
         border-radius:10px;
     }
 </style>
-<!--<script>-->
-<!--$('#modal_for_login').modal('toggle');-->
-<!--</script>-->

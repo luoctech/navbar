@@ -3,11 +3,11 @@ let path=require('path');
 
 module.exports=
     {
-        entry:'./assets/src/js/entry.js',
+        entry:'./src/entry.js',
         output:
             {
-                path:path.resolve(__dirname,'dist'),
-                filename:'bundle.js'
+                path:path.resolve(__dirname,'dev'),
+                filename:'index.js'
             },
         module:
             {
@@ -23,7 +23,7 @@ module.exports=
                         },
                         {
                             test:/\.(png|jpg|gif)$/,
-                            loader:'file!url'
+                            loader:'file!url?limit=100000'
                         }
                     ]
             }

@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="//luoc.studio" class="navbar-brand">
+            <a href="//luoc.co" class="navbar-brand">
                 <span style="color:#e14d43">落尘科技</span><br>
                 <!--<p class="navbar-text"><small>N e v e r&nbsp;&nbsp;h u r t . N e v e r&nbsp;&nbsp;b e&nbsp;&nbsp;h u r t</small></p>-->
                 <!-- TODO: add this word to the navbar with a good look !-->
@@ -15,15 +15,18 @@
         </div>
 
         <div class="collapse navbar-collapse" id="domain_bar">
-            <ul class="nav navbar-nav navbar-right logged-out" id="login_status">
+            <ul class="nav navbar-nav navbar-right" id="login_status">
+
                 <li class="login-no"><a href="#modal_for_register" data-toggle="modal" id="register">注册</a></li>
                 <li class="login-no"><a href="#modal_for_login" data-toggle="modal" id="login">登录</a></li>
+
                 <li class="login-yes">
-                    <a href="//www.twesix.cn/user" target="_blank">
-                        你好，<span id="username"></span>
+                    <a href="//luoc.co/user" target="_blank">
+                        <span id="username"></span>
                     </a>
                 </li>
                 <li class="login-yes"><a href="#logout" id="logout">注销</a></li>
+
             </ul>
         </div>
     </div>
@@ -35,21 +38,40 @@
 
 <style>
     @import "//at.alicdn.com/t/font_1469889758_9089751.css";
-    .navbar
+    .navbar,
+    .navbar-modal
     {
         font-family:微软雅黑,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
     }
-    div #navbar_loader
+    /*#login_status .login-yes*/
+    /*{*/
+        /*display:none;*/
+    /*}*/
+
+    .navbar-modal form input
     {
-        margin:0;
-        padding:0;
+        display: block;
+        font-size:20px;
     }
-    .logged-in .login-no
+    .navbar-modal form .checkbox
     {
-        display:none !important;
+        font-size:20px;
     }
-    .logged-out .login-yes
+    .navbar-modal form .checkbox input
     {
-        display: none;
+        width:22px;
+        height:22px;
+    }
+    .navbar-modal .float-right
+    {
+        float:right;
+    }
+    .navbar-modal .submit-button
+    {
+        width:100%;
+        padding:5px;
+        border:1px solid white;
+        border-radius:5px;
+        font-size:20px;
     }
 </style>
