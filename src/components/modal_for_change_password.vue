@@ -1,0 +1,64 @@
+<template>
+    <div class="modal fade navbar-modal" id="modal_for_change_password">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>修改密码</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center">请选择一种方式接收验证码</h4>
+                    <form class="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="手机号">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default">获取验证码</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="邮箱">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default">获取验证码</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="icon-info iconfont"></i></span>
+                            <input name="code" type="text" class="form-control" placeholder="请输入您收到的的验证码">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="icon-lock iconfont"></i></span>
+                            <input name="password" type="password" class="form-control" placeholder="请输入您的新密码">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="icon-lock iconfont"></i></span>
+                            <input name="confirm_password" type="password" class="form-control" placeholder="确认您的密码">
+                        </div>
+                        <br><br>
+                        <button class="btn-primary form-control" type="submit" id="login-button">修改密码</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    module.exports =
+        {
+            data: function () {
+                return {};
+            },
+            components: {}
+        }
+</script>
+<style scoped>
+    .modal
+    {
+        font-family:微软雅黑,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    }
+</style>

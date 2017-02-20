@@ -3,11 +3,11 @@ let path=require('path');
 
 module.exports=
     {
-        entry:'./src/entry.js',
+        entry:'./src/components.js',
         output:
             {
                 path:path.resolve(__dirname,'dev'),
-                filename:'index.js'
+                filename:'components.js'
             },
         module:
             {
@@ -22,8 +22,8 @@ module.exports=
                             loader:'dom!html'
                         },
                         {
-                            test:/\.(png|jpg|gif)$/,
-                            loader:'file!url?limit=100000'
+                            test: /\.vue$/,
+                            loader: 'vue-loader'
                         }
                     ]
             }

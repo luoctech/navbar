@@ -1,6 +1,5 @@
 function start(e)
 {
-    "use strict";
     e.preventDefault();
     var email=$("#register_email").val();
     var password=$("#register_password").val();
@@ -21,7 +20,6 @@ function start(e)
 
 function events()
 {
-    "use strict";
     document.body.addEventListener('navbar:register:password_not_valid',function(e)
     {
         "use strict";
@@ -34,19 +32,19 @@ function events()
         alert('email不合法');
         console.log(e);
     });
-    document.body.addEventListener('navbar:register:ok',success);
+    document.body.addEventListener('navbar:register:ok',function(e)
+    {
+        "use strict";
+        alert('注册成功');
+        $('#modal_for_register').modal('toggle');
+        console.log(e);
+    });
     document.body.addEventListener('navbar:register:error',function(e)
     {
         "use strict";
         alert('注册出错');
         console.log(e);
     });
-}
-
-function success(e)
-{
-    "use strict";
-    console.log(e);
 }
 
 module.exports.start=start;
