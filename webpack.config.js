@@ -3,11 +3,11 @@ let path=require('path');
 
 module.exports=
     {
-        entry:'./src/components.js',
+        entry:'./src/index.js',
         output:
             {
                 path:path.resolve(__dirname,'dev'),
-                filename:'components.js'
+                filename:'index.js'
             },
         module:
             {
