@@ -14,17 +14,30 @@ module.exports=
                 loaders:
                     [
                         {
-                            test:/\.css$/,
-                            loader:'style!css',
-                        },
-                        {
-                            test:/\.(html|htm)$/,
-                            loader:'dom!html'
-                        },
-                        {
                             test: /\.vue$/,
                             loader: 'vue-loader'
+                        },
+                        {
+                            test:/\.js$/,
+                            loader:'babel-loader',
+                            exclude:'/node_modules/'
                         }
                     ]
+            },
+        babel:
+            {
+                presets:['latest']
+                // , plugins:
+                //     [
+                //         [
+                //             'transform-runtime',
+                //             {
+                //                 polyfill: true,
+                //                 regenerator: true,
+                //                 helpers: true,
+                //                 moduleName:'babel-runtime'
+                //             }
+                //         ]
+                // ]
             }
     };
